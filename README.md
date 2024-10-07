@@ -39,4 +39,4 @@ This is a simple Restful API with Prisma ORM and Express.js. It is a simple blog
 
 ## Project URL
 
-[Todo List API](https://roadmap.sh/projects/blogging-platform-api)
+[Blogging Platform API](https://roadmap.sh/projects/blogging-platform-api)
