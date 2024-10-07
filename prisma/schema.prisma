@@ -1,0 +1,29 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+// Work around in mysql by ->
+  // 1. create a post model
+  // 2. npx prisma db push 
+  // 3. npx prism generate
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Post {
+  id        Int      @id @default(autoincrement())
+  title     String
+  content   String
+  category  String
+  tags      Json
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

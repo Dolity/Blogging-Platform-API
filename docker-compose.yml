@@ -1,0 +1,12 @@
+services:
+  mysql:
+    image: mysql:latest
+    container_name: myblog_mysql
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: myblogdb
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: abc123
+    ports:
+      - "3306:3306"
